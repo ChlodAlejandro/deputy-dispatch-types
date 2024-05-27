@@ -1,4 +1,5 @@
-import { PartialPartial } from '../util/PartialPartial';
+export type PartialPartial<A, B extends keyof A> = Omit<A, B> & { [K in B]?: A[B] | undefined };
+
 import { ExpandedRevision } from './Revision';
 import { LogEntry } from './Log';
 
@@ -72,9 +73,9 @@ export interface RevisionDeletionInfo extends LogEntry {
 
 type DeletionInfoFlagged<T extends keyof ChangeDeletionFlags> = (
 	Omit<RevisionDeletionInfo, 'flags'> & {
-		flags: ChangeDeletionFlags & Record<T, true>
-	}
-)
+	flags: ChangeDeletionFlags & Record<T, true>
+}
+	)
 export type PossibleDeletedRevision =
 	Omit<PartialPartial<ExpandedRevision, 'user' | 'comment'>, 'parsedcomment'>;
 export type UserDeletedRevision = PossibleDeletedRevision & {

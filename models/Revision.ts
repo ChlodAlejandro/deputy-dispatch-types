@@ -76,6 +76,7 @@ export interface MissingRevision {
 	revid: number;
 	missing?: true;
 }
+
 /**
  * Represents a MediaWiki revision that is invalid. This is almost always a malformed
  * revision ID, which is either some string that isn't a proper number, or a negative

@@ -1,6 +1,6 @@
 const docref = 'https://github.com/ChlodAlejandro/deputy-dispatch';
 
-export type ErrorFormat = `${'wiki' | 'plain' | ''}text` | 'raw' | 'bc';
+export type ErrorFormat = `${ 'wiki' | 'plain' | '' }text` | 'raw' | 'bc';
 
 export interface ErrorResponseMessage {
 	/**
@@ -64,7 +64,7 @@ export default class ErrorResponseBuilder {
 			key: 'apierror-generic'
 		} );
 
-	private errors: {code: string, message: ErrorResponseMessage, data?: Record<string, any> }[] =
+	private errors: { code: string, message: ErrorResponseMessage, data?: Record<string, any> }[] =
 		[];
 
 	/**
