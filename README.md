@@ -1,4 +1,4 @@
-# Dispatch
+# Dispatch Types
 <img align="right" width="70" height="70" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Deputy_Dispatch_logo.svg" alt="Deputy Dispatch logo">
 
 Dispatch is a Node.js+Express webserver that exposes API endpoints that processes
